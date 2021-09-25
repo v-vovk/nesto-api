@@ -5,6 +5,7 @@ const PORT = 3005;
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.setGlobalPrefix('api');
   await app.listen(PORT);
 }
 
